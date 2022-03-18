@@ -1,0 +1,119 @@
+.amber {
+  background-color: #f59e0b;
+}
+
+.blue {
+  background-color: #0b69ff;
+}
+
+.orange {
+  background-color: #f97316;
+}
+
+.emerald {
+  background-color: #10b981;
+}
+
+.teal {
+  background-color: #14b8a6;
+}
+
+.red {
+  background-color: #b91c1c;
+}
+
+.light-blue {
+  background-color: #0ea5e9;
+}
+.commentsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.INTCcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.nameTimeCommment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  width: 60%;
+  margin-left: 10px;
+}
+.nameTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.initialText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 0px;
+  margin-top: 11px;
+}
+.name {
+  font-weight: bold;
+  color: #334155;
+  font-family: 'Roboto';
+}
+.timing {
+  color: #94a3b8;
+  font-size: 12px;
+  font-family: 'Roboto';
+  margin-left: 25px;
+}
+.commentText {
+  color: #64748b;
+  font-size: 14px;
+  font-family: 'Roboto';
+  align-self: flex-start;
+}
+.initialContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.commentContainer {
+  overflow-wrap: break-word;
+  width: 150%;
+  min-height: 70px;
+  align-self: flex-start;
+  margin-top: -20px;
+}
+.likeDeleteContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.delLikeImg {
+  width: 120%;
+}
+.buttonCss {
+  background-color: transparent;
+  outline: none;
+  border-width: 0px;
+  border-style: none;
+  cursor: pointer;
+}
+.lines {
+  width: 100%;
+  border: 1px solid #dee0e3;
+  margin-top: 20px;
+  padding: 0px;
+  margin-top: 10px;
+}

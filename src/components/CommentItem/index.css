@@ -117,3 +117,8 @@
   padding: 0px;
   margin-top: 10px;
 }
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}

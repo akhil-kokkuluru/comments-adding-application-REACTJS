@@ -24,6 +24,25 @@ class Comments extends Component {
     this.setState({commentInput: event.target.value})
   }
 
+  toggleIsliked = id => {
+    this.setState(prevState => ({
+      commentList: prevState.commentList.map(eachComment => {
+        if (id === eachComment.id) {
+          return {...eachComment, isliked: !eachComment.isliked}
+        }
+        return eachComment
+      }),
+    }))
+  }
+
+  deleteComment = commentId => {
+    const {commentList} = this.state
+
+    this.setState({
+      commentList: commentList.filter(comment => comment.id !== commentId),
+    })
+  }
+
   onSubmitting = event => {
     event.preventDefault()
     const {nameInput, commentInput} = this.state
@@ -46,6 +65,19 @@ class Comments extends Component {
       commentInput: '',
       commentList: [...prevState.commentList, commentObject],
     }))
+  }
+
+  renderingComments = () => {
+    const {commentList} = this.state
+
+    return commentList.map(item => (
+      <CommentItem
+        key={item.id}
+        commentListDetails={item}
+        toggleIsliked={this.toggleIsliked}
+        deleteComment={this.deleteComment}
+      />
+    ))
   }
 
   render() {
@@ -89,17 +121,7 @@ class Comments extends Component {
             <p className="commentscss">
               <span className="numberColouring">{lengthNum}</span> Comments
             </p>
-            {commentList.map(item => (
-              <CommentItem
-                name={item.name}
-                comment={item.comment}
-                initials={item.name[0].toUpperCase()}
-                date={item.date}
-                isliked={item.isliked}
-                nums={lengthNum}
-                colorVal={item.initialColor}
-              />
-            ))}
+            <ul className="ulCSS">{this.renderingComments()}</ul>
           </div>
         </div>
       </div>
